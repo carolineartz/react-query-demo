@@ -2,11 +2,14 @@ import React from 'react'
 import ReactDOM from 'react-dom'
 
 import App from '@/App'
+import { QueryProvider } from '@/providers/QueryProvider'
 import reportWebVitals from '@/reportWebVitals'
 
 ReactDOM.render(
   <React.StrictMode>
-    <App />
+    <QueryProvider>
+      <App />
+    </QueryProvider>
   </React.StrictMode>,
   document.getElementById('root')
 )
