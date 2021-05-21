@@ -10,7 +10,7 @@ export function useQueryProduct(
   const axios = useAxios()
 
   return useQuery<ProductData[], AxiosError>(
-    ['product', params.id],
+    ['products', params.id],
     async () => {
       const { data } = await axios.get<ProductData[]>(`/products/${params.id}`)
 
