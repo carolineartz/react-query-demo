@@ -1,15 +1,19 @@
 import React from 'react'
+
 import ReactDOM from 'react-dom'
 
 import App from '@/App'
-import { QueryProvider } from '@/providers/QueryProvider'
+import { AxiosProvider } from '@/contexts/AxiosProvider'
+import { QueryProvider } from '@/contexts/QueryProvider'
 import reportWebVitals from '@/reportWebVitals'
 
 ReactDOM.render(
   <React.StrictMode>
-    <QueryProvider>
-      <App />
-    </QueryProvider>
+    <AxiosProvider>
+      <QueryProvider>
+        <App />
+      </QueryProvider>
+    </AxiosProvider>
   </React.StrictMode>,
   document.getElementById('root')
 )
