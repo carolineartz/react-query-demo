@@ -1,7 +1,8 @@
 import React from 'react'
 
-import { Box, ResponsiveContext, Card, Spinner, Grid, CardHeader, CardFooter, Text, CardBody, Image } from 'grommet'
+import { Box, ResponsiveContext, Card, Grid, CardHeader, CardFooter, Text, CardBody, Image } from 'grommet'
 
+import { LoadingIndicator } from '@/components/LoadingIndicator'
 import { useQueryProducts } from '@/hooks/queries/useQueryProducts'
 
 export function ProductList() {
@@ -10,7 +11,7 @@ export function ProductList() {
 
   return (
     <Box pad="large">
-      {productsQuery.isLoading && <Spinner alignSelf="center" />}
+      {productsQuery.isLoading && <LoadingIndicator alignSelf="center" />}
       <Grid columns={size !== 'small' ? 'small' : '100%'} gap="small">
         {productsQuery.data?.map((product, i) => {
           return (

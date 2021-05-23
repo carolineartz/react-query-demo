@@ -1,7 +1,7 @@
 import { Grommet, Box, grommet } from 'grommet'
 
 import 'styled-components/macro'
-import { ProductList } from './components/ProductList'
+import { ProductList } from '@/components/products/ProductList'
 
 function App() {
   return (
