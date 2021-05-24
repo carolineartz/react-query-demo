@@ -4,6 +4,7 @@ import { ReactQueryDevtools } from 'react-query/devtools'
 const options = {
   defaultOptions: {
     queries: {
+      refetchOnWindowFocus: false,
       cacheTime: 1000 * 60 * 60 * 24, // 24 hours
     },
   },

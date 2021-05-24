@@ -2,6 +2,8 @@ import React from 'react'
 
 import ReactDOM from 'react-dom'
 
+import { GlobalStyles } from './globalStyles'
+
 import App from '@/App'
 import { AxiosProvider } from '@/contexts/AxiosProvider'
 import { QueryProvider } from '@/contexts/QueryProvider'
@@ -11,6 +13,7 @@ ReactDOM.render(
   <React.StrictMode>
     <AxiosProvider>
       <QueryProvider>
+        <GlobalStyles />
         <App />
       </QueryProvider>
     </AxiosProvider>

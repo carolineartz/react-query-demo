@@ -1,14 +1,15 @@
-import { Grommet, Box, grommet } from 'grommet'
+import React from 'react'
+
+import { Grommet, grommet } from 'grommet'
 
 import 'styled-components/macro'
-import { ProductList } from '@/components/products/ProductList'
+
+import { ProductsPage } from './components/products/ProductsPage'
 
 function App() {
   return (
-    <Grommet css="min-height: 100vh" theme={grommet}>
-      <Box fill>
-        <ProductList />
-      </Box>
+    <Grommet css="height: 100vh" theme={grommet}>
+      <ProductsPage />
     </Grommet>
   )
 }
